@@ -1,0 +1,94 @@
+/************ Formatting **********/
+
+/* Classic */
+// Uses TinyMCE WYSIWYG-ish editor and settings.
+
+/* Code */
+// Code format wraps content like <pre><code>content</code></pre>.
+pre.wp-block-code {
+  background: rgb(238, 238, 238);
+  font-family: Courier 10 Pitch, Courier, monospace;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+
+  code {
+
+  }
+}
+
+/* Custom HTML */
+// Renders what is typed, without adding paragraph tags, etc.
+
+/* Preformatted */
+// TODO: Where exactly? These defaults are from an inline stylesheet,
+pre.wp-block-preformatted {
+  background: rgb(238, 238, 238);
+  font-family: Courier 10 Pitch, Courier, monospace;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+/* Pullquote */
+// Class applied to <blockquote> element.
+.wp-block-pullquote {
+  border-top: 4px solid rgb(85, 93, 102);
+  border-bottom: 4px solid rgb(85, 93, 102);
+  color: rgb(64, 70, 77);
+  padding: 3em 0;
+  text-align: center;
+
+  & > p {
+    font-size: 24px;
+    line-height: 1.6;
+  }
+
+  & cite, {
+    color: rgb(64, 70, 77);
+    position: relative;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+
+  &::after,
+  &blockquote::before {
+    content: "";
+  }
+}
+
+/* Table */
+// Class applied to <table> element.
+.wp-block-table {
+  overflow-x: auto;
+  display: block;
+  border-collapse: collapse;
+  width: 100%;
+
+  & tbody {
+    width: 100%;
+    display: table;
+    min-width: 240px;
+  }
+
+  & td,
+  & th {
+    padding: 0.5em;
+    border: 1px solid currentColor;
+  }
+}
+
+/* Verse */
+.wp-block-verse pre,
+pre.wp-block-verse {
+  color: rgb(25, 30, 35);
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1em;
+  overflow: auto;
+}

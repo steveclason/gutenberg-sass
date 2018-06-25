@@ -1,0 +1,353 @@
+/***************** Common Blocks *****************/
+
+/* Paragraph */
+p {
+  &.is-small-text {
+    font-size: 14px;
+  }
+
+  &.is-regular-text {
+    font-size: 16px;
+  }
+
+  &.is-large-text {
+    font-size: 36px;
+  }
+
+  &.is-larger-text {
+    font-size: 48px;
+  }
+
+  // Don't show the drop cap when editing the paragraph's content. It causes a
+  // number of bugs in combination with `contenteditable` fields. The caret
+  // cannot be set around it, caret position calculation fails in Chrome, and
+  // typing at the end of the paragraph doesn't work.
+  &.has-drop-cap:not(:focus)::first-letter {
+    float: left;
+    font-size: 4.1em;
+    line-height: 0.7;
+    font-weight: 600;
+    margin: 0.07em 0.23em 0 0;
+    text-transform: uppercase;
+    font-style: normal;
+  }
+
+  &.has-background {
+    padding: 20px 30px;
+  }
+}
+
+/* Audio */
+.wp-block-audio figcaption {
+  margin-top: 0.5em;
+  color: $dark-gray-300;
+  text-align: center;
+  font-size: $default-font-size;
+}
+
+/* Cover Image */
+.wp-block-cover-image {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  min-height: 430px;
+  width: 100%;
+  margin: 0 0 1.5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.has-left-content {
+    justify-content: flex-start;
+
+    h2,
+    .wp-block-cover-image-text {
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+
+  &.has-right-content {
+    justify-content: flex-end;
+
+    h2,
+    .wp-block-cover-image-text {
+      margin-right: 0;
+      text-align: right;
+    }
+  }
+
+  h2,
+  .wp-block-cover-image-text {
+    color: $white;
+    font-size: 2em;
+    line-height: 1.25;
+    z-index: 1;
+    margin-bottom: 0;
+    max-width: $content-width;
+    padding: $block-padding;
+    text-align: center;
+
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+      color: $white;
+    }
+  }
+
+  &.has-parallax {
+    background-attachment: fixed;
+  }
+
+  &.has-background-dim::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($black, 0.5);
+  }
+
+  @for $i from 1 through 10 {
+    &.has-background-dim.has-background-dim-#{ $i * 10 }::before {
+      background-color: rgba($black, $i * 0.1);
+    }
+  }
+
+  &.components-placeholder {
+    height: inherit;
+  }
+
+  // Apply max-width to floated items that have no intrinsic width
+  [data-align="left"] &,
+  [data-align="right"] &,
+  &.alignleft,
+  &.alignright {
+    max-width: $content-width / 2;
+    width: 100%;
+  }
+}
+
+
+
+/* Image */
+.wp-block-image { // Applied to the <figure> element.
+  width: fit-content;
+
+  figcaption {
+    margin-top: 0.5em;
+    color: $dark-gray-300;
+    text-align: center;
+    font-size: $default-font-size;
+  }
+
+  &.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  &.is-resized {
+    width: min-content;
+
+    // Emulate min-content for Edge and IE11
+    display: -ms-inline-grid;
+    -ms-grid-columns: min-content;
+
+    figcaption {
+      -ms-grid-row: 2;
+    }
+
+    img {
+      max-width: none;
+    }
+  }
+}
+
+/* Heading */
+.wp-block-heading {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  // These follow a Major Third type scale
+  h1 {
+    font-size: 2.44em;
+  }
+
+  h2 {
+    font-size: 1.95em;
+  }
+
+  h3 {
+    font-size: 1.56em;
+  }
+
+  h4 {
+    font-size: 1.25em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-size: 0.8em;
+  }
+}
+
+/* Gallery */
+.wp-block-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  // allow gallery items to go edge to edge
+  margin: 0 -8px 0 -8px;
+
+  .blocks-gallery-image,
+  .blocks-gallery-item {
+    margin: 8px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    figure {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      padding: 40px 10px 5px;
+      color: $white;
+      text-align: center;
+      font-size: $default-font-size;
+      background: linear-gradient(0deg, rgba($color: $black, $alpha: 0.7) 0, rgba($color: $black, $alpha: 0.3) 60%, transparent);
+      position: absolute;
+      width: 100%;
+      max-height: 100%;
+      overflow: auto;
+    }
+  }
+
+  // Cropped
+  &.is-cropped .blocks-gallery-image,
+  &.is-cropped .blocks-gallery-item {
+    a,
+    img {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    // Alas, IE11+ doesn't support object-fit
+    _:-ms-lang(x),
+    figure {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  // Responsive fallback value, 2 columns
+  & .blocks-gallery-image,
+  & .blocks-gallery-item {
+    width: calc( 100% / 2 - 16px );
+  }
+
+  &.columns-1 .blocks-gallery-image,
+  &.columns-1 .blocks-gallery-item {
+    width: calc(100% / 1 - 16px);
+  }
+
+  @include break-small {
+    @for $i from 3 through 8 {
+      &.columns-#{ $i } .blocks-gallery-image,
+      &.columns-#{ $i } .blocks-gallery-item {
+        width: calc(100% / #{ $i } - 16px);
+      }
+    }
+  }
+
+  // Apply max-width to floated items that have no intrinsic width
+  [data-align="left"] &,
+  [data-align="right"] &,
+  &.alignleft,
+  &.alignright {
+    max-width: $content-width / 2;
+    width: 100%;
+  }
+}
+
+/* List */
+// There are no styles for lists.
+
+/* Quote */
+.wp-block-quote {
+  cite,
+  footer {
+    color: $dark-gray-300;
+    margin-top: 1em;
+    position: relative;
+    font-size: $default-font-size;
+    font-style: normal;
+  }
+
+  &.is-large {
+    margin: 0 0 16px;
+    padding: 0 1em;
+
+    p {
+      font-size: 24px;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    cite,
+    footer {
+      font-size: 19px;
+      text-align: right;
+    }
+  }
+}
+
+/* Subheading */
+p.wp-block-subhead {
+  font-size: 1.1em;
+  font-style: italic;
+  opacity: 0.75;
+}
+
+/* Video */
+.wp-block-video {
+  margin: 0;
+
+  figcaption {
+    margin-top: 0.5em;
+    color: $dark-gray-300;
+    text-align: center;
+    font-size: $default-font-size;
+  }
+
+  &.aligncenter {
+    text-align: center;
+  }
+}
