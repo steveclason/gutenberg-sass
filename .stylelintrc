@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-shorthand-property-overrides": true,
+    "declaration-colon-space-after": "always-single-line",
+    "max-empty-lines": 2,
+    "rule-empty-line-before": [ "always", {
+      "except": ["first-nested"],
+      "ignore": ["after-comment"],
+    } ],
+    "unit-whitelist": ["em", "rem", "%", "s", "ms", "px", "vw", "vh", "deg", "fr"],
+    "indentation": [2, {
+      "except": ["value"],
+      "ignore": ["inside-parens"],
+      "severity": "warning",
+      "indentInsideParens": "twice"
+    }] ,
+    "max-nesting-depth": [4, {
+      "severity": "warning",
+    }],
+  }
+}
