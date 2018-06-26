@@ -20,8 +20,6 @@ Completed files are:
   - \_mixins.scss (needs to be reviewed, probably most useful for editor)
   - \_variables.scss
   - \_z-index.scss (seems exclusively relevant for editor)
-
-To come:
 * \_gutenberg-blocks-widgets.scss
 * \_gutenberg-blocks-embeds.scss
 
