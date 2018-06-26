@@ -14,7 +14,6 @@ gulp.task( 'sass', function () {
   log( 'Generate CSS files ' + (new Date()).toString());
   return gulp
     .src('./css-partials/gutenberg-blocks.scss')
-    // .src( './css-partials/_test.scss' )
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe( autoprefixer( 'last 3 version' ))
