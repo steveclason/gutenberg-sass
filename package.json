@@ -2,7 +2,7 @@
   "name": "gutenberg-sass",
   "version": "1.0.0",
   "description": "CSS partials for WordPress Gutenberg blocks.",
-  "main": "_gutenberg-blocks.scss",
+  "main": "gutenberg-blocks.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
