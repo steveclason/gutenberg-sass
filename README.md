@@ -11,6 +11,15 @@ Completed files are:
 * \_gutenberg-blocks-common.scss
 * \_gutenberg-blocks-formatting.scss
 * \_gutenberg-blocks-layout.scss
+* variables
+  - \_animations.scss
+  - \_breakpoints.scss (mainly for editor, not so useful for visible styles)
+  - \_colors.scss (will want to pull this into both editor and visible stylesheets)
+  - \_common.scss
+  - \_gutenberg-blocks-variables.scss (just has the @import declarations)
+  - \_mixins.scss (needs to be reviewed, probably most useful for editor)
+  - \_variables.scss
+  - \_z-index.scss (seems exclusively relevant for editor)
 
 To come:
 * \_gutenberg-blocks-widgets.scss
@@ -18,3 +27,4 @@ To come:
 
 TODO:
 * ~~Clean up variables in \_gutenberg-blocks-common.scss.~~
+* Compile editor-style.css also.
