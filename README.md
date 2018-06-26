@@ -10,11 +10,11 @@ Completed files are:
 * \_gutenberg-blocks.scss, just imports the category files.
 * \_gutenberg-blocks-common.scss
 * \_gutenberg-blocks-formatting.scss
+* \_gutenberg-blocks-layout.scss
 
 To come:
-* \_gutenberg-blocks-layout.scss
 * \_gutenberg-blocks-widgets.scss
 * \_gutenberg-blocks-embeds.scss
 
 TODO:
-* Clean up variables in \_gutenberg-blocks-common.scss.
+* ~~Clean up variables in \_gutenberg-blocks-common.scss.~~
