@@ -13,7 +13,7 @@ gulp.task( 'sass', function () {
   'use strict';
   log( 'Generate CSS files ' + (new Date()).toString());
   return gulp
-    .src('./css-partials/gutenberg-blocks.scss')
+    .src('./css-partials/blocks.scss')
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe( autoprefixer( 'last 3 version' ))

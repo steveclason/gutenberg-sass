@@ -5,6 +5,8 @@ Styles for the core blocks of WordPress Gutenberg are gathered by category into 
 
 The intention is to copy the default styles and comment them out so I can use just the styles necessary to get an effect by uncommenting and editing a declaration.
 
+I compile the partials with gulp-sass to find errors, IRL these partials will be included in \_s' larger collection.
+
 
 Completed files are:
 * \_gutenberg-blocks.scss, just imports the category files.
@@ -25,4 +27,5 @@ Completed files are:
 
 TODO:
 * ~~Clean up variables in \_gutenberg-blocks-common.scss.~~
-* Compile editor-style.css also.
+* Compile `editor-style.css` also.
+* make \_variables-common.scss with variables shared by editor and visible and compile into both `editor-style-css` and `style.css`
