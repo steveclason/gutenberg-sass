@@ -9,7 +9,8 @@ var autoprefixer = require( 'gulp-autoprefixer' );
 var log = require( 'fancy-log' );
 //require( 'stylelint' )(),
 
-gulp.task( 'sass', function () {
+// TODO: use series to compile SASS then copy to dist.
+gulp.task( 'sass', gulp.series( function () {
   'use strict';
   log( 'Generate CSS files ' + (new Date()).toString());
   return gulp
@@ -20,4 +21,4 @@ gulp.task( 'sass', function () {
     .pipe( sourcemaps.write('.'))
     .pipe( gulp.dest( './dist' ));
 
-});
+}));
