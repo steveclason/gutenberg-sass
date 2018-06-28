@@ -27,5 +27,7 @@ Completed files are:
 
 TODO:
 * ~~Clean up variables in \_gutenberg-blocks-common.scss.~~
+* proofread visible styles.
+* Comment out defaults.
 * Compile `editor-style.css` also.
-* make \_variables-common.scss with variables shared by editor and visible and compile into both `editor-style-css` and `style.css`
+* make \_variables-common.scss with variables shared by editor and visible and compile into both `editor-style-css` and `style.css`.
