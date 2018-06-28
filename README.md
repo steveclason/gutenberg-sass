@@ -9,24 +9,24 @@ I compile the partials with gulp-sass to find errors, IRL these partials will be
 
 
 Completed files are:
-* \_gutenberg-blocks.scss, just imports the category files.
-* \_gutenberg-blocks-common.scss
-* \_gutenberg-blocks-formatting.scss
-* \_gutenberg-blocks-layout.scss
+* \_blocks.scss, just imports the category files.
+* \_blocks-common.scss
+* \_blocks-formatting.scss
+* \_blocks-layout.scss
 * variables
   - \_animations.scss
   - \_breakpoints.scss (mainly for editor, not so useful for visible styles)
   - \_colors.scss (will want to pull this into both editor and visible stylesheets)
   - \_common.scss
-  - \_gutenberg-blocks-variables.scss (just has the @import declarations)
+  - \_blocks-variables.scss (just has the @import declarations)
   - \_mixins.scss (needs to be reviewed, probably most useful for editor)
   - \_variables.scss
   - \_z-index.scss (seems exclusively relevant for editor)
-* \_gutenberg-blocks-widgets.scss
-* \_gutenberg-blocks-embeds.scss
+* \_blocks-widgets.scss
+* \_blocks-embeds.scss
 
 TODO:
-* ~~Clean up variables in \_gutenberg-blocks-common.scss.~~
+* ~~Clean up variables in \_blocks-common.scss.~~
 * proofread visible styles.
 * Comment out defaults.
 * Compile `editor-style.css` also.
