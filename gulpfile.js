@@ -14,7 +14,7 @@ gulp.task( 'sass', gulp.series( function () {
   'use strict';
   log( 'Generate CSS files ' + (new Date()).toString());
   return gulp
-    .src('./css-partials/blocks.scss')
+    .src('./css-partials/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe( autoprefixer( 'last 3 version' ))
