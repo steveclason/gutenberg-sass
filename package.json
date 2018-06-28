@@ -29,6 +29,8 @@
     "gulp-cli": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4"
-  }
+    "gulp-sourcemaps": "^2.6.4",
+    "hoek": "^4.2.1"
+  },
+  "dependencies": {}
 }
