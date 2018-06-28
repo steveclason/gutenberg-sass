@@ -1,34 +1,5 @@
 /* Shortcode */
-// Editor styles, probably irrelevant to visible.
-.wp-block-shortcode {
-  display: flex;
-  flex-direction: row;
-  padding: $block-padding;
-  background-color: $light-gray-100;
-  font-size: $default-font-size;
-  font-family: $default-font;
-
-  label {
-    flex-basis: 0;
-    display: flex;
-    align-items: center;
-    margin-right: $item-spacing;
-    white-space: nowrap;
-    font-weight: 600;
-  }
-
-  .editor-plain-text {
-    /*
-     * Unit required on zero value to work around IE bug.
-     * https://github.com/philipwalton/flexbugs#flexbug-4
-     */
-    flex: 1 0 0%;
-  }
-
-  .dashicon {
-    margin-right: $item-spacing;
-  }
-}
+// Styles are irrelevant to visible, important to editor.
 
 /* Categories */
 .wp-block-categories {
@@ -50,7 +21,7 @@
   &.alignright {
     margin-left: 2em;
   }
-  
+
   &.is-grid {
     display: flex;
     flex-wrap: wrap;

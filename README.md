@@ -31,3 +31,8 @@ TODO:
 * Comment out defaults.
 * Compile `editor-style.css` also.
 * make \_variables-common.scss with variables shared by editor and visible and compile into both `editor-style-css` and `style.css`.
+* atom.io regex to comment out all css declarations, preserving the selectors and indentation:  
+    find: `^(\s+)(.*;)$`  
+    replace with: `$1// $2`
+* re-do regex to not duplicate `//` on existing comments.
+* what does `@content` do?

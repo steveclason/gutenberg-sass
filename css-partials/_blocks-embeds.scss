@@ -6,8 +6,6 @@
 }
 
 // Apply max-width to floated items that have no intrinsic width
-.editor-block-list__block[data-type="core/embed"][data-align="left"] .editor-block-list__block-edit,
-.editor-block-list__block[data-type="core/embed"][data-align="right"] .editor-block-list__block-edit,
 .wp-block-embed.alignleft,
 .wp-block-embed.alignright {
   max-width: $content-width / 2;
