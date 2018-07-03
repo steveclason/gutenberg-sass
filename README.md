@@ -34,5 +34,37 @@ TODO:
 * atom.io regex to comment out all css declarations, preserving the selectors and indentation:  
     find: `^(?!\s*\/)(\s*)(.*;)$`  
     replace with: `$1// $2`
-* re-do regex to not duplicate `//` on existing comments.
+* ~~re-do regex to not duplicate `//` on existing comments.~~
 * what does `@content` do?
+
+## File Contents ##
+* \_blocks-common.scss
+  - Paragraph
+  - Audio
+  - Cover Image
+  - Image
+  - Heading
+  - Gallery
+  - List
+  - Quote
+  - Subheading
+  - Video
+* \_blocks-formatting.scss
+  - Classic
+  - Code
+  - Custom HTML
+  - Preformatted
+  - Pullquote
+  - Table
+  - Verse
+* \_blocks-layout.scss [mainly editor styles]
+  - Button
+  - Columns
+  - More [used to be called 'read more']
+  - Page break
+  - Seperator
+  - Spacer
+  - Text Columns
+* \_blocks-widgets.scss
+  - Categories
+  - Latest Posts

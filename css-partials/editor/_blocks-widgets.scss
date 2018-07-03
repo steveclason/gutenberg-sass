@@ -1,0 +1,19 @@
+/* Editor styles for Widgets. */
+
+/* Categories */
+.gutenberg .wp-block-categories ul {
+  padding-left: 2.5em;
+
+  ul {
+    margin-top: 6px;
+  }
+}
+
+/* Latest Posts */
+.gutenberg .wp-block-latest-posts {
+  padding-left: 2.5em;
+  
+  &.is-grid {
+    padding-left: 0;
+  }
+}
