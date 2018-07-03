@@ -1,0 +1,7 @@
+/*! Gutenberg editor styles, base file for SASS compiling. */
+
+/** Share variables with the visible styles. This will work well for colors and fonts, maybe _mixins
+ * and animations, but breakpoints and z-index should be used for editor revisions only.
+ */
+
+@import "variables/editor-block-variables";

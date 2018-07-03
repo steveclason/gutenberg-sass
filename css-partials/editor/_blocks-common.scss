@@ -1,0 +1,199 @@
+/* WordPress Gutenberg editor blocks-common. */
+
+/* Paragraph */
+// There are no editor style rules for Paragraph.
+// A CSS Rule contains a selector and one or more declarations. A Declaration contains
+// a property and a value. Let's get the nomenclature right.
+
+/* Audio */
+.wp-block-audio audio {
+  width: 100%;
+}
+
+/* Cover Image */
+.wp-block-cover-image {
+  margin: 0;
+
+  .editor-rich-text__tinymce[data-is-empty="true"]:before {
+    position: inherit;
+  }
+
+  .editor-rich-text__tinymce:focus a[data-mce-selected] {
+    padding: 0 2px;
+    margin: 0 -2px;
+    border-radius: 2px;
+    box-shadow: none;
+    background: rgba( 255, 255, 255, 0.3 );
+  }
+
+  .editor-rich-text strong {
+    font-weight: 300;
+  }
+
+  &.components-placeholder h2 {
+    color: inherit;
+  }
+
+  &.has-left-content .editor-rich-text__inline-toolbar {
+    justify-content: flex-start;
+  }
+
+  &.has-right-content .editor-rich-text__inline-toolbar{
+    justify-content: flex-end;
+  }
+}
+
+/* Image */
+.wp-block-image {
+  position: relative;
+  margin: 0;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  &.is-resized img {
+    height: 100%;
+  }
+
+  &.is-transient img {
+    @include loading_fade;
+  }
+}
+
+.wp-block-image__resize-handler-top-right,
+.wp-block-image__resize-handler-bottom-right,
+.wp-block-image__resize-handler-top-left,
+.wp-block-image__resize-handler-bottom-left {
+  display: none;
+  border-radius: 50%;
+  border: 2px solid $white;
+  width: 15px !important;
+  height: 15px !important;
+  position: absolute;
+  background: theme( primary );
+  padding: 0 3px 3px 0;
+  box-sizing: border-box;
+  cursor: se-resize;
+
+  .wp-block-image.is-focused & {
+    display: block;
+    z-index: z-index( '.wp-block-image__resize-handlers' );
+  }
+}
+
+/*!rtl:begin:ignore*/
+.wp-block-image__resize-handler-top-right {
+  top: -6px !important;
+  right: -6px !important;
+}
+
+.wp-block-image__resize-handler-top-left {
+  top: -6px !important;
+  left: -6px !important;
+}
+
+.wp-block-image__resize-handler-bottom-right {
+  bottom: -6px !important;
+  right: -6px !important;
+}
+
+.wp-block-image__resize-handler-bottom-left {
+  bottom: -6px !important;
+  left: -6px !important;
+}
+/*!rtl:end:ignore*/
+
+.editor-block-list__block[data-type="core/image"][data-align="center"] {
+  .wp-block-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &[data-resized="false"] .wp-block-image > div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.edit-post-sidebar .core-blocks-image__dimensions {
+  margin-bottom: 1em;
+
+  .core-blocks-image__dimensions__row {
+    display: flex;
+    justify-content: space-between;
+
+    .core-blocks-image__dimensions__width,
+    .core-blocks-image__dimensions__height {
+      margin-bottom: 0.5em;
+
+      // Fix the text and placeholder text being misaligned in Safari
+      input {
+        line-height: 1.25;
+      }
+    }
+
+    .core-blocks-image__dimensions__width {
+      margin-right: 5px;
+    }
+
+    .core-blocks-image__dimensions__height {
+      margin-left: 5px;
+    }
+  }
+}
+
+.editor-block-list__block[data-type="core/image"] .editor-block-toolbar .editor-url-input__button-modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -1px 0;
+
+  @include break-small() {
+    margin: -1px;
+  }
+}
+
+/* Heading */
+.wp-block-heading {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  // These follow a Major Third type scale
+  h1 {
+    font-size: 2.44em;
+  }
+
+  h2 {
+    font-size: 1.95em;
+  }
+
+  h3 {
+    font-size: 1.56em;
+  }
+
+  h4 {
+    font-size: 1.25em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-size: 0.8em;
+  }
+}
+
+/* Gallery */
+/* List */
+/* Quote */
+/* Subheading */
+/* Video */
